@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		744D7BAB2519FC7800A4BAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */; };
 		744D7BAD2519FC7800A4BAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */; };
-		744D7BAF2519FC7800A4BAFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BAE2519FC7800A4BAFB /* ViewController.swift */; };
 		744D7BB22519FC7800A4BAFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BB02519FC7800A4BAFB /* Main.storyboard */; };
 		744D7BB42519FC7B00A4BAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BB32519FC7B00A4BAFB /* Assets.xcassets */; };
 		744D7BB72519FC7B00A4BAFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BB52519FC7B00A4BAFB /* LaunchScreen.storyboard */; };
+		744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BBF251B115500A4BAFB /* RecipeCell.swift */; };
+		744D7BC2251B115500A4BAFB /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BC0251B115500A4BAFB /* RecipeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		744D7BA72519FC7800A4BAFB /* ryori-kiroku-album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ryori-kiroku-album.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		744D7BAE2519FC7800A4BAFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		744D7BB12519FC7800A4BAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		744D7BB32519FC7B00A4BAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		744D7BB62519FC7B00A4BAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		744D7BB82519FC7B00A4BAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744D7BBF251B115500A4BAFB /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		744D7BC0251B115500A4BAFB /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,22 @@
 			children = (
 				744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */,
 				744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */,
-				744D7BAE2519FC7800A4BAFB /* ViewController.swift */,
 				744D7BB02519FC7800A4BAFB /* Main.storyboard */,
+				744D7BBE251B10D900A4BAFB /* View */,
 				744D7BB32519FC7B00A4BAFB /* Assets.xcassets */,
 				744D7BB52519FC7B00A4BAFB /* LaunchScreen.storyboard */,
 				744D7BB82519FC7B00A4BAFB /* Info.plist */,
 			);
 			path = "ryori-kiroku-album";
+			sourceTree = "<group>";
+		};
+		744D7BBE251B10D900A4BAFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				744D7BBF251B115500A4BAFB /* RecipeCell.swift */,
+				744D7BC0251B115500A4BAFB /* RecipeCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +139,7 @@
 				744D7BB72519FC7B00A4BAFB /* LaunchScreen.storyboard in Resources */,
 				744D7BB42519FC7B00A4BAFB /* Assets.xcassets in Resources */,
 				744D7BB22519FC7800A4BAFB /* Main.storyboard in Resources */,
+				744D7BC2251B115500A4BAFB /* RecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744D7BAF2519FC7800A4BAFB /* ViewController.swift in Sources */,
+				744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */,
 				744D7BAB2519FC7800A4BAFB /* AppDelegate.swift in Sources */,
 				744D7BAD2519FC7800A4BAFB /* SceneDelegate.swift in Sources */,
 			);
