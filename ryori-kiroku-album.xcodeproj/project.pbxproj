@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33DAE008B0E21C19EA491A03 /* Pods_ryori_kiroku_album.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEDA8A9390A28B8E8685A58 /* Pods_ryori_kiroku_album.framework */; };
 		744D7BAB2519FC7800A4BAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */; };
 		744D7BAD2519FC7800A4BAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */; };
 		744D7BB22519FC7800A4BAFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BB02519FC7800A4BAFB /* Main.storyboard */; };
@@ -14,9 +15,12 @@
 		744D7BB72519FC7B00A4BAFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BB52519FC7B00A4BAFB /* LaunchScreen.storyboard */; };
 		744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BBF251B115500A4BAFB /* RecipeCell.swift */; };
 		744D7BC2251B115500A4BAFB /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BC0251B115500A4BAFB /* RecipeCell.xib */; };
+		744D7BC9251F6C9500A4BAFB /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BC8251F6C9500A4BAFB /* RecipeListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06C37EEA4A790FB8A5A26108 /* Pods-ryori-kiroku-album.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ryori-kiroku-album.release.xcconfig"; path = "Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album.release.xcconfig"; sourceTree = "<group>"; };
+		2CEDA8A9390A28B8E8685A58 /* Pods_ryori_kiroku_album.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ryori_kiroku_album.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744D7BA72519FC7800A4BAFB /* ryori-kiroku-album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ryori-kiroku-album.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		744D7BB82519FC7B00A4BAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		744D7BBF251B115500A4BAFB /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		744D7BC0251B115500A4BAFB /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		744D7BC8251F6C9500A4BAFB /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		A6943616DF96DB0C42A5FF3F /* Pods-ryori-kiroku-album.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ryori-kiroku-album.debug.xcconfig"; path = "Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DAE008B0E21C19EA491A03 /* Pods_ryori_kiroku_album.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B8B6166BDA6635BEA1BBEB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CEDA8A9390A28B8E8685A58 /* Pods_ryori_kiroku_album.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DBB329CD6785625DDB88B88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6943616DF96DB0C42A5FF3F /* Pods-ryori-kiroku-album.debug.xcconfig */,
+				06C37EEA4A790FB8A5A26108 /* Pods-ryori-kiroku-album.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		744D7B9E2519FC7800A4BAFB = {
 			isa = PBXGroup;
 			children = (
 				744D7BA92519FC7800A4BAFB /* ryori-kiroku-album */,
 				744D7BA82519FC7800A4BAFB /* Products */,
+				3DBB329CD6785625DDB88B88 /* Pods */,
+				1B8B6166BDA6635BEA1BBEB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,7 @@
 				744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */,
 				744D7BB02519FC7800A4BAFB /* Main.storyboard */,
 				744D7BBE251B10D900A4BAFB /* View */,
+				744D7BC5251F6C1900A4BAFB /* Controllers */,
 				744D7BB32519FC7B00A4BAFB /* Assets.xcassets */,
 				744D7BB52519FC7B00A4BAFB /* LaunchScreen.storyboard */,
 				744D7BB82519FC7B00A4BAFB /* Info.plist */,
@@ -78,6 +105,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		744D7BC5251F6C1900A4BAFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				744D7BC8251F6C9500A4BAFB /* RecipeListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 744D7BBB2519FC7B00A4BAFB /* Build configuration list for PBXNativeTarget "ryori-kiroku-album" */;
 			buildPhases = (
+				7C846A01F6B81D2CBA31440B /* [CP] Check Pods Manifest.lock */,
 				744D7BA32519FC7800A4BAFB /* Sources */,
 				744D7BA42519FC7800A4BAFB /* Frameworks */,
 				744D7BA52519FC7800A4BAFB /* Resources */,
+				8A589E3779A1A21124425D0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,11 +182,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C846A01F6B81D2CBA31440B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ryori-kiroku-album-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A589E3779A1A21124425D0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		744D7BA32519FC7800A4BAFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744D7BC9251F6C9500A4BAFB /* RecipeListViewController.swift in Sources */,
 				744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */,
 				744D7BAB2519FC7800A4BAFB /* AppDelegate.swift in Sources */,
 				744D7BAD2519FC7800A4BAFB /* SceneDelegate.swift in Sources */,
@@ -294,6 +374,7 @@
 		};
 		744D7BBC2519FC7B00A4BAFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6943616DF96DB0C42A5FF3F /* Pods-ryori-kiroku-album.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +393,7 @@
 		};
 		744D7BBD2519FC7B00A4BAFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C37EEA4A790FB8A5A26108 /* Pods-ryori-kiroku-album.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
