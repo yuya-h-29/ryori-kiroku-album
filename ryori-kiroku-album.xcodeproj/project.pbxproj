@@ -16,6 +16,7 @@
 		744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BBF251B115500A4BAFB /* RecipeCell.swift */; };
 		744D7BC2251B115500A4BAFB /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744D7BC0251B115500A4BAFB /* RecipeCell.xib */; };
 		744D7BC9251F6C9500A4BAFB /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BC8251F6C9500A4BAFB /* RecipeListViewController.swift */; };
+		744D7BCB2520D69500A4BAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744D7BCA2520D69400A4BAFB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		744D7BBF251B115500A4BAFB /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		744D7BC0251B115500A4BAFB /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		744D7BC8251F6C9500A4BAFB /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		744D7BCA2520D69400A4BAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A6943616DF96DB0C42A5FF3F /* Pods-ryori-kiroku-album.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ryori-kiroku-album.debug.xcconfig"; path = "Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				744D7BB32519FC7B00A4BAFB /* Assets.xcassets */,
 				744D7BB52519FC7B00A4BAFB /* LaunchScreen.storyboard */,
 				744D7BB82519FC7B00A4BAFB /* Info.plist */,
+				744D7BCA2520D69400A4BAFB /* Constants.swift */,
 			);
 			path = "ryori-kiroku-album";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744D7BCB2520D69500A4BAFB /* Constants.swift in Sources */,
 				744D7BC9251F6C9500A4BAFB /* RecipeListViewController.swift in Sources */,
 				744D7BC1251B115500A4BAFB /* RecipeCell.swift in Sources */,
 				744D7BAB2519FC7800A4BAFB /* AppDelegate.swift in Sources */,

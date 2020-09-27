@@ -15,30 +15,26 @@ class RecipeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AF.request("https://cooking-records.herokuapp.com/cooking_records").responseJSON { response in
+        AF.request(K.API.cookingRecordsUrl).responseJSON { response in
+            
             switch response.result {
-            case .success(let value):
-                let json = JSON(value)
+            
+                case .success(let value):
+                    
+                    let json = JSON(value)
+                    let list: Array<JSON> = json[K.API.Parameters.cookingRecords].arrayValue
+                
+//                let imageUrlArr = list.map{$0[K.API.Parameters.imageUrl].stringValue}
+//                let commentArr = list.map{$0[K.API.Parameters.comment].stringValue}
+//                let recipeTypeArr = list.map{$0[K.API.Parameters.recipeType].stringValue}
+//                let dateArr = list.map{$0[K.API.Parameters.recordedAt].stringValue}
+//                debugPrint(imageUrlArr, commentArr, recipeTypeArr, dateArr)
+
+                    debugPrint(list)
                 
                 
-                let list: Array<JSON> = json["cooking_records"].arrayValue
-                
-                let imageUrlArr = list.map{$0["image_url"].stringValue}
-                
-                let commentArr = list.map{$0["comment"].stringValue}
-                
-                let recipeTypeArr = list.map{$0["recipe_type"].stringValue}
-                
-                let dateArr = list.map{$0["recorded_at"].stringValue}
-                
-                debugPrint(imageUrlArr)
-                debugPrint(commentArr)
-                debugPrint(recipeTypeArr)
-                debugPrint(dateArr)
-                
-                
-            case .failure(let error):
-                print(error)
+                case .failure(let error):
+                    print(error)
             }
         }
         
