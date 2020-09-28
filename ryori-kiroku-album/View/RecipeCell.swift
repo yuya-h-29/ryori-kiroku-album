@@ -13,6 +13,7 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var comment: UILabel!
     
     
     override func awakeFromNib() {
@@ -24,6 +25,14 @@ class RecipeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func configureView(recipe: RecipeData){
+//        recipeImage.image = image with url
+        date.text = recipe.recordedAt
+        genre.text = recipe.recipeType
+        comment.text = recipe.comment
     }
     
 }

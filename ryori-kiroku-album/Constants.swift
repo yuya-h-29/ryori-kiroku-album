@@ -29,6 +29,12 @@ struct K {
         }
     }
     
+    struct RecipeList {
+        
+        static let cell = "RecipeCell"
+        
+    }
+    
     
     
     

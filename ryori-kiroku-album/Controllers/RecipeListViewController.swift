@@ -12,13 +12,23 @@ import Alamofire
 
 class RecipeListViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     
-    var recipeDataArr: [RecipeData] = []
+    var recipes: [RecipeData] = []
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: K.RecipeList.cell, bundle: nil), forCellReuseIdentifier: K.RecipeList.cell)
+        
+        loadRecipes()
+    }
+    
+    
+    func loadRecipes() {
+
         AF.request(K.API.cookingRecordsUrl).responseJSON { response in
             
             switch response.result {
@@ -32,29 +42,42 @@ class RecipeListViewController: UIViewController {
                         
                         let recipeData = RecipeData(recipeType: cookingRecord[K.API.Parameters.recipeType].stringValue, recordedAt: cookingRecord[K.API.Parameters.recordedAt].stringValue, imageUrl: cookingRecord[K.API.Parameters.imageUrl].stringValue, comment: cookingRecord[K.API.Parameters.comment].stringValue)
                         
-                        self.recipeDataArr.append(recipeData)
+                        self.recipes.append(recipeData)
+                        
+                        // reload data to fill the table view
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
 
                 case .failure(let error):
                     print(error)
+            
             }
         }
-        
-        
-
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+extension RecipeListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return recipes.count
+    }
+    
+ 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let recipe = recipes[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.RecipeList.cell, for: indexPath) as! RecipeCell
+        
+        cell.configureView(recipe: recipe)
+        
+        return cell
+    }
+    
+}
+
