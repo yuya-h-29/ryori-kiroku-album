@@ -11,6 +11,10 @@ import SwiftyJSON
 import Alamofire
 
 class RecipeListViewController: UIViewController {
+    
+    
+    var recipeDataArr: [RecipeData] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +27,14 @@ class RecipeListViewController: UIViewController {
                     
                     let json = JSON(value)
                     let list: Array<JSON> = json[K.API.Parameters.cookingRecords].arrayValue
-                
-//                let imageUrlArr = list.map{$0[K.API.Parameters.imageUrl].stringValue}
-//                let commentArr = list.map{$0[K.API.Parameters.comment].stringValue}
-//                let recipeTypeArr = list.map{$0[K.API.Parameters.recipeType].stringValue}
-//                let dateArr = list.map{$0[K.API.Parameters.recordedAt].stringValue}
-//                debugPrint(imageUrlArr, commentArr, recipeTypeArr, dateArr)
+                    
+                    for cookingRecord in list {
+                        
+                        let recipeData = RecipeData(recipeType: cookingRecord[K.API.Parameters.recipeType].stringValue, recordedAt: cookingRecord[K.API.Parameters.recordedAt].stringValue, imageUrl: cookingRecord[K.API.Parameters.imageUrl].stringValue, comment: cookingRecord[K.API.Parameters.comment].stringValue)
+                        
+                        self.recipeDataArr.append(recipeData)
+                    }
 
-                    debugPrint(list)
-                
-                
                 case .failure(let error):
                     print(error)
             }
