@@ -20,19 +20,23 @@ class RecipeCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     
     func configureView(recipe: RecipeData){
-//        recipeImage.image = image with url
+        
+        recipeImage.setImage(imageUrl: recipe.imageUrl)
         date.text = recipe.recordedAt
         genre.text = recipe.recipeType
         comment.text = recipe.comment
+        
     }
     
+
 }
