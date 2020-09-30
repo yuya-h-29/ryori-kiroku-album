@@ -13,7 +13,7 @@ struct K {
     
     struct API {
         
-        static let cookingRecordsUrl = "https://cooking-records.herokuapp.com/cooking_records"
+        static let cookingRecordsUrl = "https://cooking-records.herokuapp.com/cooking_records?offset="
         
         struct Parameters {
             

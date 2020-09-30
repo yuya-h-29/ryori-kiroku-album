@@ -15,6 +15,9 @@ class RecipeListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var recipes: [RecipeData] = []
+    var offset: Int = 0
+    var pagination: Bool = false
+    var isPaginating: Bool = false
     
 
     override func viewDidLoad() {
@@ -23,6 +26,7 @@ class RecipeListViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
+        tableView.delegate = self
         
         loadRecipes()
     
@@ -30,8 +34,13 @@ class RecipeListViewController: UIViewController {
     
     
     func loadRecipes() {
+        
+        print("recipe called")
+        
+        isPaginating = true
+        pagination = false
 
-        AF.request(K.API.cookingRecordsUrl).responseJSON { response in
+        AF.request(K.API.cookingRecordsUrl + "\(offset)").responseJSON { response in
             
             switch response.result {
             
@@ -40,6 +49,10 @@ class RecipeListViewController: UIViewController {
                     let json = JSON(value)
                     let list: Array<JSON> = json[K.API.Parameters.cookingRecords].arrayValue
                     
+                    // change the offset integer
+                    self.offset += list.count
+                   
+                    
                     for cookingRecord in list {
                         
                         let recipeData = RecipeData(recipeType: cookingRecord[K.API.Parameters.recipeType].stringValue, recordedAt: cookingRecord[K.API.Parameters.recordedAt].stringValue, imageUrl: cookingRecord[K.API.Parameters.imageUrl].stringValue, comment: cookingRecord[K.API.Parameters.comment].stringValue)
@@ -47,9 +60,14 @@ class RecipeListViewController: UIViewController {
                         self.recipes.append(recipeData)
                         
                         // reload data to fill the table view
+                        
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
+                        
+                        // end pagination
+                        self.isPaginating = false
+                        
                     }
 
                 case .failure(let error):
@@ -62,7 +80,7 @@ class RecipeListViewController: UIViewController {
 }
 
 
-extension RecipeListViewController: UITableViewDataSource {
+extension RecipeListViewController: UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -80,6 +98,28 @@ extension RecipeListViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let position = scrollView.contentOffset.y
+        
+        if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            
+            pagination = true
+            
+            guard (!isPaginating && pagination) else {
+                return
+            }
+            
+            self.loadRecipes()
+            
+            
+        }
+    }
+    
+
+     
     
 }
 
