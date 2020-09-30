@@ -30,13 +30,11 @@ class RecipeTableViewCell: UITableViewCell {
     
     func configureView(recipe: RecipeData){
         
-        
         commnetLabel.text = recipe.comment
         recipeImageView.setImage(imageUrl: recipe.imageUrl)
         dateLabel.text = recipe.recordedAt
         recipeTypeLabel.text = recipe.recipeType
 
-        
     }
 
 }
