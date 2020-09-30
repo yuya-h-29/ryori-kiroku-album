@@ -16,7 +16,6 @@ class RecipeListViewController: UIViewController {
     
     var recipes: [RecipeData] = []
     var offset: Int = 0
-    var pagination: Bool = false
     var isPaginating: Bool = false
     
 
@@ -35,11 +34,11 @@ class RecipeListViewController: UIViewController {
     
     func loadRecipes() {
         
-        print("recipe called")
-        
+        // start pagination process
         isPaginating = true
-        pagination = false
 
+        
+        // fetch data from api endpoint
         AF.request(K.API.cookingRecordsUrl + "\(offset)").responseJSON { response in
             
             switch response.result {
@@ -59,13 +58,13 @@ class RecipeListViewController: UIViewController {
                         
                         self.recipes.append(recipeData)
                         
-                        // reload data to fill the table view
                         
+                        // reload data to fill the table view
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
                         
-                        // end pagination
+                        // end pagination process
                         self.isPaginating = false
                         
                     }
@@ -106,14 +105,11 @@ extension RecipeListViewController: UITableViewDataSource, UIScrollViewDelegate,
         
         if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height) {
             
-            pagination = true
-            
-            guard (!isPaginating && pagination) else {
+            guard (!isPaginating ) else {
                 return
             }
             
             self.loadRecipes()
-            
             
         }
     }
