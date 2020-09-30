@@ -21,9 +21,11 @@ class RecipeListViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-        tableView.register(UINib(nibName: K.RecipeList.cell, bundle: nil), forCellReuseIdentifier: K.RecipeList.cell)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
         
         loadRecipes()
+    
     }
     
     
@@ -72,7 +74,7 @@ extension RecipeListViewController: UITableViewDataSource {
         
         let recipe = recipes[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.RecipeList.cell, for: indexPath) as! RecipeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.RecipeList.cell, for: indexPath) as! RecipeTableViewCell
         
         cell.configureView(recipe: recipe)
         
