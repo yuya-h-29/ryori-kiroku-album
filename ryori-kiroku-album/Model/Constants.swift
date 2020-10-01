@@ -27,6 +27,7 @@ struct K {
             
             static let recordedAt = "recorded_at"
         }
+        
     }
     
     struct RecipeList {

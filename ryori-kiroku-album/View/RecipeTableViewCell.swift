@@ -13,7 +13,8 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var commnetLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var recipeTypeLabel: UILabel!
+    @IBOutlet weak var recipeTypeImageView: UIImageView!
+//    @IBOutlet weak var recipeTypeLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -31,9 +32,11 @@ class RecipeTableViewCell: UITableViewCell {
     func configureView(recipe: RecipeData){
         
         commnetLabel.text = recipe.comment
-        recipeImageView.setImage(imageUrl: recipe.imageUrl)
+        recipeImageView.setRecipeImage(imageUrl: recipe.imageUrl)
         dateLabel.text = setTemplate(strDate: recipe.recordedAt)
-        recipeTypeLabel.text = recipe.recipeType
+//        recipeTypeLabel.text = recipe.recipeType
+        recipeTypeImageView.image = UIImage(named: recipe.recipeType)
+        
 
     }
 
