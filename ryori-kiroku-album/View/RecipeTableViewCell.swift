@@ -18,14 +18,14 @@ class RecipeTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+    
     
     
     func configureView(recipe: RecipeData){
@@ -37,15 +37,16 @@ class RecipeTableViewCell: UITableViewCell {
         dateLabel.textColor = .gray
         recipeTypeImageView.image = UIImage(named: recipe.recipeType)
         
-
     }
 
 }
 
+
+
+// change to yyyy年MM月dd日 format
 extension RecipeTableViewCell {
     
     func setTemplate (strDate: String) -> String {
-        
         
         let dateFormatter = DateFormatter()
         

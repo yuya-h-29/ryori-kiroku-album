@@ -48,6 +48,7 @@ class RecipeListViewController: UIViewController {
                     let json = JSON(value)
                     let list: Array<JSON> = json[K.API.Parameters.cookingRecords].arrayValue
                     
+                    
                     // change the offset integer
                     self.offset += list.count
                    
@@ -59,7 +60,6 @@ class RecipeListViewController: UIViewController {
                         self.recipes.append(recipeData)
                         
                         
-                        // reload data to fill the table view
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
@@ -105,6 +105,8 @@ extension RecipeListViewController: UITableViewDataSource, UIScrollViewDelegate,
         
         if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height) {
             
+            
+            // if pagination is started, do nothing
             guard (!isPaginating ) else {
                 return
             }
