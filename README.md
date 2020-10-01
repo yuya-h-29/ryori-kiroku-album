@@ -7,7 +7,7 @@
 
 ## デモ
 
-![料理記録アルバム　Demo]()
+![料理記録demo](https://user-images.githubusercontent.com/54800510/94790837-cfab5780-0411-11eb-9383-db33b2ed0566.gif)
 
 
 
