@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		06C37EEA4A790FB8A5A26108 /* Pods-ryori-kiroku-album.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ryori-kiroku-album.release.xcconfig"; path = "Target Support Files/Pods-ryori-kiroku-album/Pods-ryori-kiroku-album.release.xcconfig"; sourceTree = "<group>"; };
 		2CEDA8A9390A28B8E8685A58 /* Pods_ryori_kiroku_album.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ryori_kiroku_album.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		744D7BA72519FC7800A4BAFB /* ryori-kiroku-album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ryori-kiroku-album.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		744D7BA72519FC7800A4BAFB /* 料理健康アルバム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "料理健康アルバム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		744D7BAA2519FC7800A4BAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744D7BAC2519FC7800A4BAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		744D7BB12519FC7800A4BAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		744D7BA82519FC7800A4BAFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				744D7BA72519FC7800A4BAFB /* ryori-kiroku-album.app */,
+				744D7BA72519FC7800A4BAFB /* 料理健康アルバム.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			);
 			name = "ryori-kiroku-album";
 			productName = "ryori-kiroku-album";
-			productReference = 744D7BA72519FC7800A4BAFB /* ryori-kiroku-album.app */;
+			productReference = 744D7BA72519FC7800A4BAFB /* 料理健康アルバム.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -401,9 +401,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yuyaharada.ryori-kiroku-album";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "料理健康アルバム";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,9 +420,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yuyaharada.ryori-kiroku-album";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "料理健康アルバム";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

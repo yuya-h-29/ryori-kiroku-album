@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="320" y="-542"/>
         </scene>
-        <!--料理記録アルバム-->
+        <!--わたしのアルバム-->
         <scene sceneID="MPe-AO-8dh">
             <objects>
                 <viewController id="p8N-Nq-UE0" customClass="RecipeListViewController" customModule="ryori_kiroku_album" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZc-Ro-x47"/>
                     </view>
-                    <navigationItem key="navigationItem" title="料理記録アルバム" id="d5j-uP-gxe"/>
+                    <navigationItem key="navigationItem" title="わたしのアルバム" id="d5j-uP-gxe"/>
                     <connections>
                         <outlet property="tableView" destination="pcT-mN-ld5" id="7yI-zn-Acx"/>
                     </connections>
