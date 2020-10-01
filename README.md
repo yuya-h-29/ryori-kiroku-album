@@ -1,1 +1,0 @@
-# ryori-kiroku-album
