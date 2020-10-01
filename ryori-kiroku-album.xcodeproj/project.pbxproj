@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				744D7BB02519FC7800A4BAFB /* Main.storyboard */,
-				744D7BCF2521E13400A4BAFB /* UIImageViewExtension.swift */,
 				74606A2225248E5800216BDC /* RecipeTableViewCell.swift */,
+				744D7BCF2521E13400A4BAFB /* UIImageViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

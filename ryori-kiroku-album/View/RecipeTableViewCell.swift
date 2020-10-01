@@ -32,9 +32,26 @@ class RecipeTableViewCell: UITableViewCell {
         
         commnetLabel.text = recipe.comment
         recipeImageView.setImage(imageUrl: recipe.imageUrl)
-        dateLabel.text = recipe.recordedAt
+        dateLabel.text = setTemplate(strDate: recipe.recordedAt)
         recipeTypeLabel.text = recipe.recipeType
 
     }
 
+}
+
+extension RecipeTableViewCell {
+    
+    func setTemplate (strDate: String) -> String {
+        
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+        
+        let result = dateFormatter.string(from: Date())
+        
+        return result
+    }
+
+    
 }
