@@ -1,0 +1,6 @@
+framework module Pods_ryori_kiroku_album {
+  umbrella header "Pods-ryori-kiroku-album-umbrella.h"
+
+  export *
+  module * { export * }
+}
