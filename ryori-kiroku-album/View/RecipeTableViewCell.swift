@@ -50,11 +50,15 @@ extension RecipeTableViewCell {
         
         let dateFormatter = DateFormatter()
         
+        dateFormatter.locale = .init(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let date = dateFormatter.date(from: strDate)!
+        
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
         
-        let result = dateFormatter.string(from: Date())
+        return dateFormatter.string(from: date)
         
-        return result
     }
 
     

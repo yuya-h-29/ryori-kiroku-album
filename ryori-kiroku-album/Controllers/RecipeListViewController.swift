@@ -23,7 +23,7 @@ class RecipeListViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
         tableView.delegate = self
         
